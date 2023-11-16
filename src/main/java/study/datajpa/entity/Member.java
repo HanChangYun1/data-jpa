@@ -11,7 +11,7 @@ import javax.persistence.*;
 @NamedQuery(
         name="Member.findByUsername",
         query="select m from Member m where m.username = :username")   //실무에서 잘 쓰지않는다
-public class Member {
+public class Member extends JpaBaseEntity {
 
     @Id @GeneratedValue
     @Column(name = "member_id")
